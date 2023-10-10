@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ES2020.Promise",
+      "DOM"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "exclude": [
+    "**/errors.ts"
+  ]
+}
