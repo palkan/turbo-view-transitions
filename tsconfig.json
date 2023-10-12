@@ -1,23 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "esnext",
+    "target": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowJs": true,
-    "strict": true,
-    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
-    "lib": [
-      "ES2020.Promise",
-      "DOM"
-    ],
-    "types": [
-      "node",
-      "jest"
-    ]
+    "strict": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "exclude": [
-    "**/errors.ts"
-  ]
+  "include": ["src/**/*.ts", "tests/errors.ts"],
+  "exclude": ["node_modules"]
 }
