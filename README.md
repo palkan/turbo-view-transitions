@@ -2,6 +2,9 @@
 
 [Turbo][] plugin to use [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API). This plugin allows you to animate transitions of specific elements between pages by adding `data-turbo-transition` attribute to them.
 
+> [!NOTE]
+> Although this library named after Turbo, it can be used with any other HTML-driven application. See, for example, how we [use it with Docsify](https://github.com/anycable/docs.anycable.io/commit/e49d916e920aa6402e4d3cfffa122eebe0f2cb5f) for [docs.anycable.io](https://docs.anycable.io).
+
 ## Usage
 
 The primary goal of this library is to allow animated _objects_ on the page in HTML driven applications. When you have a _collection page_ and a _single object_ page and want to animate the transition between them, you can hit the following problem: there cannot be multiple elements with the same `view-transition-name` style defined on the page. To overcome this limitation, this library helps to identify matching elements and add the `view-transition-name` style on-the-fly and only for the duration of the transition. All you need is to add a `data-turbo-transition="<transition-name>"` attribute to the elements you want to animate.
