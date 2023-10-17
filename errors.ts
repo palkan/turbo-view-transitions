@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function */
-import { performTransition, shouldPerformTransition } from '../src/index.js'
+import { performTransition, shouldPerformTransition } from './index.js'
 
 performTransition(document.body, document.body, async () => {})
 const isTransition: boolean = shouldPerformTransition()

@@ -1,17 +1,13 @@
-name: Test
+name: Lint
 on:
   push:
     branches:
       - master
   pull_request:
-permissions:
-  contents: read
 env:
   FORCE_COLOR: 2
-
 jobs:
   test:
-    name: Node.js Latest Full
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -25,5 +21,5 @@ jobs:
         with:
           useLockFile: false
           install-command: yarn --silent
-      - name: Run tests
-        run: yarn test
+      - name: Run linters
+        run: yarn lint
