@@ -30,9 +30,16 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "src",
-    "package.json"
+    "src"
   ],
+  "prettier": {
+    "arrowParens": "avoid",
+    "jsxSingleQuote": false,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
   "devDependencies": {
     "@types/dom-view-transitions": "^1.0.2",
     "@types/jsdom": "^21.1.0",
