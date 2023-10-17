@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/turbo-view-transitions.svg)](https://badge.fury.io/js/turbo-view-transitions)
+[![Test](https://github.com/palkan/turbo-view-transitions/workflows/Test/badge.svg)](https://github.com/palkan/turbo-view-transitions/actions)
+
 # Turbo View Transitions
 
 [Turbo][] plugin to use [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API). This plugin allows you to animate transitions of specific elements between pages by adding `data-turbo-transition` attribute to them.
