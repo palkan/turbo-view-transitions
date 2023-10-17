@@ -1,6 +1,6 @@
 {
   "name": "turbo-view-transitions",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "View Transitions API for HTML-first applications",
   "scripts": {
     "test:unit": "uvu -r tsx/cjs tests '.test.(ts|js)$'",
@@ -30,7 +30,8 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "src"
+    "src",
+    "package.json"
   ],
   "devDependencies": {
     "@types/dom-view-transitions": "^1.0.2",
