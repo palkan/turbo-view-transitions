@@ -6,21 +6,24 @@ import { reset, setup } from "./setup/env";
 
 setup();
 
-const shouldPeformTransition = suite("shouldPeformTransition");
-shouldPeformTransition.before.each(() => {
+const shouldPerformTransitionSuite = suite("shouldPerformTransition");
+shouldPerformTransitionSuite.before.each(() => {
   reset();
   document.startViewTransition = (async () => {}) as unknown as any; // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-explicit-any
 });
-shouldPeformTransition("has meta", () => {
+
+shouldPerformTransitionSuite("has meta", () => {
   document.head.innerHTML = `
     <meta name="view-transition" content="same-origin">
   `;
   assert.ok(shouldPerformTransition());
 });
-shouldPeformTransition("has no meta", () => {
+
+shouldPerformTransitionSuite("has no meta", () => {
   assert.not.ok(shouldPerformTransition());
 });
-shouldPeformTransition("has meta but no startViewTransition", () => {
+
+shouldPerformTransitionSuite("has meta but no startViewTransition", () => {
   document.startViewTransition = undefined as unknown as any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
   document.head.innerHTML = `
@@ -29,4 +32,4 @@ shouldPeformTransition("has meta but no startViewTransition", () => {
   assert.not.ok(shouldPerformTransition());
 });
 
-shouldPeformTransition.run();
+shouldPerformTransitionSuite.run();

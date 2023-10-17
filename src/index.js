@@ -92,5 +92,6 @@ export async function performTransition(fromEl, toEl, callback, opts = {}) {
 
   await document.startViewTransition(callback).finished.then(() => {
     resetTransitions(fromEl, opts);
+    resetTransitions(toEl, opts);
   });
 }
