@@ -2,6 +2,10 @@
 
 ## master
 
+## 0.2.2 (2023-10-16)
+
+- Fix view transition names when not specified (cannot start with `$`). ([@palkan][])
+
 ## 0.2.0 (2023-10-16)
 
 - Migrate to PNPM, uvu, etc. ([@dkzlv][])

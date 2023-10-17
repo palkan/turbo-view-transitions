@@ -1,6 +1,6 @@
 {
   "name": "turbo-view-transitions",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "View Transitions API for HTML-first applications",
   "scripts": {
     "test:unit": "uvu -r tsx/cjs tests '.test.(ts|js)$'",
