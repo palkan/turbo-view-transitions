@@ -39,7 +39,7 @@ document.addEventListener("turbo:load", () => {
 
 ### API
 
-#### `shouldPeformTransition`
+#### `shouldPerformTransition`
 
 This function returns true iff both of the following conditions are satisfied:
 
