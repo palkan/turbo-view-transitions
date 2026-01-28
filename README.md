@@ -8,6 +8,20 @@
 > [!NOTE]
 > Although this library named after Turbo, it can be used with any other HTML-driven application. See, for example, how we [use it with Docsify](https://github.com/anycable/docs.anycable.io/commit/e49d916e920aa6402e4d3cfffa122eebe0f2cb5f) for [docs.anycable.io](https://docs.anycable.io).
 
+## Installation
+
+Using npm:
+
+```sh
+npm install turbo-view-transitions
+```
+
+Using yarn:
+
+```sh
+yarn add turbo-view-transitions
+```
+
 ## Usage
 
 The primary goal of this library is to allow animated _objects_ on the page in HTML driven applications. When you have a _collection page_ and a _single object_ page and want to animate the transition between them, you can hit the following problem: there cannot be multiple elements with the same `view-transition-name` style defined on the page. To overcome this limitation, this library helps to identify matching elements and add the `view-transition-name` style on-the-fly and only for the duration of the transition. All you need is to add a `data-turbo-transition="<transition-name>"` attribute to the elements you want to animate.
@@ -84,5 +98,39 @@ performTransition(oldEl, newEl, () => {
   activeAttr: 'data-active-view-transition',
 });
 ```
+
+## Using with bundlers
+
+This library is distributed as an ES module (ESM). It works out of the box with modern bundlers like Webpack, Rollup, esbuild, and others.
+
+### Symfony Webpack Encore
+
+[Webpack Encore](https://symfony.com/doc/current/frontend.html) is Symfony's wrapper around Webpack. To use this library with Encore:
+
+1. First, install the package:
+
+    ```sh
+    npm install turbo-view-transitions
+    # or
+    yarn add turbo-view-transitions
+    ```
+
+2. Import it in your JavaScript file (e.g., `assets/app.js`):
+
+    ```js
+    import { shouldPerformTransition, performTransition } from "turbo-view-transitions";
+    ```
+
+3. Run the build:
+
+    ```sh
+    npm run build
+    # or
+    yarn build
+    ```
+
+If you encounter module resolution errors, make sure:
+- The package is listed in your `package.json` dependencies
+- You've run `npm install` or `yarn install` after adding the dependency
 
 [Turbo]: https://turbo.hotwire.dev/
